@@ -4,7 +4,6 @@ on:
   pull request:
     # path:
     #   - "src/**"
-  push:
 
 jobs:
   lint:
@@ -16,4 +15,9 @@ jobs:
       - name: Super-Linter
         # uses: super-linter/super-linter@b92721f792f381cedc002ecdbb9847a15ece5bb8
         uses: super-linter/super-linter@v7.1.0
-        env:GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEFAULT_BRANCH: main
+          OUTPUT_FOLDER: super_linter_report
+          OUTPUT_DETAILS: detailed
+          # VALIDATE_ALL_CODEBASE: false  # only lint changed files
