@@ -1,2 +1,4 @@
 *.log
 venv/
+src/bin/
+src/obj/
