@@ -1,9 +1,9 @@
 name: CI Lint
 
 on:
-  pull request:
-    path:
-      - "src/**"
+  pull_request:
+    # path:
+    #   - "src/**"
 
 jobs:
   lint:
@@ -20,4 +20,4 @@ jobs:
           DEFAULT_BRANCH: main
           OUTPUT_FOLDER: super_linter_report
           OUTPUT_DETAILS: detailed
-          VALIDATE_ALL_CODEBASE: false  # only lint changed files
+          # VALIDATE_ALL_CODEBASE: false  # only lint changed files
