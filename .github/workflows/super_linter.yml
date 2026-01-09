@@ -7,10 +7,13 @@ on:
 
 jobs:
   lint:
+    name: Lint
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # fetch full history
 
       - name: Super-Linter
         # uses: super-linter/super-linter@b92721f792f381cedc002ecdbb9847a15ece5bb8
