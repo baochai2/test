@@ -1,0 +1,14 @@
+name: CI Lint
+
+on:
+  pull request:
+    path:
+      - "src/**"
+  push:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      -
