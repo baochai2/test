@@ -5,6 +5,10 @@ on:
     # path:
     #   - "src/**"
 
+permissions:
+  contents: read
+  checks: write
+
 jobs:
   lint:
     name: Lint
