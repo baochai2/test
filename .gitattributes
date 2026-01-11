@@ -1,0 +1,21 @@
+# set default behavior to automatically normalize line endings
+* text=auto
+
+# explicitly declare text files with specific line endings
+# *.txt text eol=lf
+# *.md text eol=lf
+# *.css text eol=lf
+# *.js text eol=lf
+
+# Windows-specific files use CRLF
+# *.bat text eol=crlf
+# *.cmd text eol=crlf
+
+# this can prevent unnecessary text processing and disable merging
+*.png binary
+*.jpg binary
+*.pdf binary
+
+# ignore when git archive
+.github/** export-ignore
+tests/** export-ignore
