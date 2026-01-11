@@ -16,6 +16,37 @@
 *.jpg binary
 *.pdf binary
 
+# use better diff for all json files
+#*.json diff=json
+# write the following code in .git/config or global config
+# [diff "json"]
+#     textconv = python -m json.tool
+
+# use word-based diff for markdown
+#*.md diff=markdown
+# [diff "markdown"]
+#     wordRegex = [a-zA-Z0-9_]+|[[:space:]]
+
+# use special diff for image files
+#*.png diff=exif
+# [diff "exif"]
+#     textconv = exiftool
+
+# use indent filter for all json files, need configuring it in .git/config or global config
+# *.js filter=indent
+
+# use encryption filter for sensitive files
+# secrets.json filter=git-crypt
+
 # ignore when git archive
 .github/** export-ignore
 tests/** export-ignore
+
+# use union merge strategy for CHANGELOG.md
+# CHANGELOG.md merge=union
+
+# avoid merging binary files
+# *.db merge=binary
+
+# use custom merge strategy for specific file
+#.properties merge=properties
