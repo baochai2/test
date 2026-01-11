@@ -5,6 +5,10 @@ on:
     # path:
     #   - "src/**"
 
+permissions:
+  contents: read
+  checks: write
+
 jobs:
   lint:
     name: Lint
@@ -13,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # fetch full history
+          fetch-depth: 0 # fetch full history
 
       - name: Super-Linter
         # uses: super-linter/super-linter@b92721f792f381cedc002ecdbb9847a15ece5bb8
