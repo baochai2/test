@@ -1,4 +1,4 @@
 *.log
-/venv/
-/src/bin/
-/src/obj/
+venv/
+src/bin/
+src/obj/
